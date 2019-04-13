@@ -27,22 +27,22 @@ public class CarController {
         return carService.createCar(car);
     }
 
-    @RequestMapping(value = "/employee/{id}", method = RequestMethod.DELETE)
+    @RequestMapping(value = "/car/{id}", method = RequestMethod.DELETE)
     void delete(@PathVariable("id") String id) {
         carService.deleteCar(id);
     }
 
-    @RequestMapping(value="/employee", method = RequestMethod.GET)
+    @RequestMapping(value="/cars", method = RequestMethod.GET)
     List<Car> findAll() {
         return carService.getAllCars();
     }
 
-    @RequestMapping(value = "/employee/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/car/{id}", method = RequestMethod.GET)
     Car findById(@PathVariable("id") String id) {
         return carService.getCar(id);
     }
 
-    @RequestMapping(value = "/employee", method = RequestMethod.PUT)
+    @RequestMapping(value = "/car", method = RequestMethod.PUT)
     Car update(@RequestBody Car car) {
         return carService.updateCar(car);
     }

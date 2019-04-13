@@ -4,11 +4,9 @@ import org.springframework.data.cassandra.mapping.PrimaryKey;
 import org.springframework.data.cassandra.mapping.Table;
 
 @Table("car")
-public class Car {
-    @PrimaryKey("id")
-    private String id;
-    private TirePreassure tirePreassure;
-    private GPS gps;
+public class Car extends AbstractModel {
+    //private TirePreassure tirePreassure;
+    //private GPS gps;
     private float fuelConsumption;
     private float mileage;
     private float averageSpeed;
@@ -21,10 +19,9 @@ public class Car {
         super();
     }
 
-    public Car(String id, TirePreassure tirePreassure, GPS gps, float fuelConsumption, float mileage, float averageSpeed, float fuel, float loadWeight, float cargoTemperature, float lastBreak) {
-        this.id = id;
-        this.tirePreassure = tirePreassure;
-        this.gps = gps;
+    public Car(/*TirePreassure tirePreassure, GPS gps,*/  float fuelConsumption, float mileage, float averageSpeed, float fuel, float loadWeight, float cargoTemperature, float lastBreak) {
+        //this.tirePreassure = tirePreassure;
+        //this.gps = gps;
         this.fuelConsumption = fuelConsumption;
         this.mileage = mileage;
         this.averageSpeed = averageSpeed;
@@ -34,15 +31,7 @@ public class Car {
         this.lastBreak = lastBreak;
     }
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public TirePreassure getTirePreassure() {
+    /*public TirePreassure getTirePreassure() {
         return tirePreassure;
     }
 
@@ -57,7 +46,7 @@ public class Car {
     public void setGps(GPS gps) {
         this.gps = gps;
     }
-
+*/
     public float getFuelConsumption() {
         return fuelConsumption;
     }

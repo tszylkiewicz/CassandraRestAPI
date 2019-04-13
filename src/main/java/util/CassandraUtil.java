@@ -28,15 +28,15 @@ public class CassandraUtil {
     /**
      * Constant String for Keyspace
      */
-    private static final String KEYSPACE = "cassandra.keyspace";
+    private static final String KEYSPACE = "spring.data.cassandra.keyspace-name";
     /**
      * Constant String for ContactPoints
      */
-    private static final String CONTACTPOINTS = "cassandra.contactpoints";
+    private static final String CONTACTPOINTS = "spring.data.cassandra.contact-points";
     /**
      * Constant String for Port
      */
-    private static final String PORT = "cassandra.port";
+    private static final String PORT = "spring.data.cassandra.port";
 
     @Autowired
     private Environment environment;

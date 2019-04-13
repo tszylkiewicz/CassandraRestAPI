@@ -3,7 +3,7 @@ package model;
 import org.springframework.data.cassandra.mapping.Table;
 
 @Table("gps")
-public class GPS {
+public class GPS extends AbstractModel {
     private float lat;
     private float lng;
 

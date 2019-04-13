@@ -3,7 +3,7 @@ package model;
 import org.springframework.data.cassandra.mapping.Table;
 
 @Table("tirePressure")
-public class TirePreassure {
+public class TirePreassure extends AbstractModel {
     private float rf;
     private float lf;
     private float rr;
