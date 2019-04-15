@@ -25,6 +25,11 @@ public class CarController implements ErrorController {
         return "Nierelacyjne bazy danych";
     }
 
+    @PostMapping(value = SERVICE + "/CreateCarsDB")
+    public Iterable<Car> createCarsDB(@RequestBody Iterable<Car> cars) {
+        return carRepository.saveAll(cars);
+    }
+
     @PostMapping(value = SERVICE + "/CreateCar")
     public Car createCar(@RequestBody Car car) {
         return carRepository.save(car);
