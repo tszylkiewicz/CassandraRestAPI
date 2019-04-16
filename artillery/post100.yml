@@ -1,0 +1,42 @@
+config:
+  target: 'http://localhost:8080'
+  phases:
+    - duration: 60
+      arrivalRate: 100
+  variables:
+    id:
+      - 'A9EF6A8E-0BB0-658F-4DCF-2403FF7EFC45'
+      - 'B9EF6A8E-0BB0-658F-4DCF-2403FF7EFC45'
+      - 'C9EF6A8E-0BB0-658F-4DCF-2403FF7EFC45'
+      - 'D9EF6A8E-0BB0-658F-4DCF-2403FF7EFC45'
+      - 'E9EF6A8E-0BB0-658F-4DCF-2403FF7EFC45'
+      - 'F9EF6A8E-0BB0-658F-4DCF-2403FF7EFC45'
+      - 'G9EF6A8E-0BB0-658F-4DCF-2403FF7EFC45'
+      - 'H9EF6A8E-0BB0-658F-4DCF-2403FF7EFC45'
+      - 'I9EF6A8E-0BB0-658F-4DCF-2403FF7EFC45'
+      - 'J9EF6A8E-0BB0-658F-4DCF-2403FF7EFC45'
+scenarios:
+  - name: 'Post data'
+    flow:
+    - post:
+        url: '/cars/CreateCar'
+        json: {
+          "id": "{{ id }}",
+          "tirePressure": {
+            "RF": "error",
+            "LF": "1.9",
+            "RR": "1.6",
+            "LR": "2.3"
+          },
+          "gps": {
+            "lat": "12.74314",
+            "lng": "172.79338"
+          },
+          "fuelConsumption": "13.54",
+          "mileage": "75481.4",
+          "averageSpeed": 29,
+          "fuel": "32.5",
+          "loadWeight": "569.5",
+          "cargoTemperature": "-11",
+          "lastBreak": 478
+        }
