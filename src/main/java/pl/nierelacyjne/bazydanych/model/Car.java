@@ -24,4 +24,6 @@ public class Car {
     private String loadWeight;
     private String cargoTemperature;
     private float lastBreak;
+
+    public Car() {}
 }
