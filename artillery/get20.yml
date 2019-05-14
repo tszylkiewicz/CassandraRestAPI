@@ -3,8 +3,20 @@ config:
   phases:
     - duration: 60
       arrivalRate: 20
+  variables:
+    id:
+      - '27A8FF39-62BA-5F03-D70D-C2B9B6901263'
+      - '5C969CEC-0468-D66C-6036-A97D5E99D4E3'
+      - 'C7EDA8EF-0773-4AFB-443C-BE49AC5C3BE7'
+      - '145CD8D0-230A-9B1C-2D55-FE31EAA02069'
+      - 'FEBE05EB-9B2A-DC97-8687-179501C77BF3'
+      - 'E5E16DEE-92C2-CD8C-0973-6039432641E4'
+      - '9E670576-1ACD-93BE-E101-0693D020B7F4'
+      - '596599AC-B157-90F5-44E4-C5E9FA39572A'
+      - '1AF11434-5748-E685-F6C6-7CFC8F324B2D'
+      - 'BEA731EC-758F-8B63-850B-7A9CE3F88C33'
 scenarios:
-  - name : 'Get all data'
+  - name : 'Get car by id'
     flow:
     - get:
-        url: '/cars/GetAllCars'
+        url: '/cars/GetCar/{{id}}'

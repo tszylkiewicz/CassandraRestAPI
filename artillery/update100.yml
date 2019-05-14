@@ -1,0 +1,44 @@
+config:
+  target: 'http://localhost:8080'
+  phases:
+    - duration: 60
+      arrivalRate: 100
+  variables:
+    cargoTemperature:
+      - '-11'
+      - '-10'
+      - '-9'
+      - '-8'
+      - '-7'
+      - '-6'
+      - '-5'
+      - '-4'
+      - '-3'
+      - '-2'
+      - '-1'
+      - '0'
+scenarios:
+  - name: 'Update car'
+    flow:
+    - post:
+        url: '/cars/CreateCar'
+        json: {
+          "id": "27A8FF39-62BA-5F03-D70D-C2B9B6901263",
+          "tirePressure": {
+            "RF": "error",
+            "LF": "1.9",
+            "RR": "1.6",
+            "LR": "2.3"
+          },
+          "gps": {
+            "lat": "12.74314",
+            "lng": "172.79338"
+          },
+          "fuelConsumption": "13.54",
+          "mileage": "75481.4",
+          "averageSpeed": 29,
+          "fuel": "32.5",
+          "loadWeight": "569.5",
+          "cargoTemperature": "{{cargoTemperature}}",
+          "lastBreak": 478
+        }
